@@ -2,35 +2,50 @@
 
 {% block title %}Mon panier!
 {% endblock %}
-{% block stylesheet %}
+{% block stylesheets %}
 	<link rel="stylesheet" href="{{asset('css/event.css')}}">
-	<link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.css')}}">
 	<link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.min.css')}}">
+	<link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap-grid.min.css')}}">
+	<link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap-grid.css')}}">
+	<link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap-reboot.rtl.css')}}">
+	<link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap-reboot.css')}}">
+	<link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap-reboot.rtl.css')}}">
+	<link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.css')}}">
 
 {% endblock %}
 {% block body %}
 	<html>
-		<h1>Votre panier!</h1>
-		<p></p>
-		<table class="table">
-			<thead>
-				<tr>
-					<th>Evenement</th>
-					<th>Nombre de billet</th>
-					<th>Quantite</th>
-					<th>Total</th>
+		<div class="card">
 
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<th>Evenement</th>
-					<td>Nombre de billet</td>
-					<td>Quantite</td>
-					<td>Total</td>
-
-				</tr>
-			</tbody>
-		</table>
+			<table class="table">
+				<thead>
+					<tr>
+						<th scope="col">#</th>
+						<th scope="col">First</th>
+						<th scope="col">Last</th>
+						<th scope="col">Handle</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">1</th>
+						<td>Mark</td>
+						<td>Otto</td>
+						<td>@mdo</td>
+					</tr>
+					<tr>
+						<th scope="row">2</th>
+						<td>Jacob</td>
+						<td>Thornton</td>
+						<td>@fat</td>
+					</tr>
+					<tr>
+						<th scope="row">3</th>
+						<td colspan="2">Larry the Bird</td>
+						<td>@twitter</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 	</html>
 {% endblock %}

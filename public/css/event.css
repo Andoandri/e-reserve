@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Cambay:ital@1&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+}
+body{
+    background-color: #F6F1F1;
+}
+img{
+    width: 80px;
+    height: 80px;
+    margin-top: 20px;
+}
+.title{
+    font-family: 'Pacifico', cursive;
+    text-align: left;
+    font-size: 80px;
+    color: #146C94;
+    z-index: 3;
+}
+.nom{
+    display: flex;
+}
+.logo-reserve {
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 16px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: #146C94;
+    border-bottom: white;
+    color: #F6F1F1;
+    text-transform: uppercase;
+
+}
+button:hover{
+    transform: scale(1.1);
+}
+.login{
+    position: absolute;
+    right: -22px;
+    top: 50px;
+    width: 300px;
+    height: 250px;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 8px white;
+    border-radius: 6px;
+    display:none;
+    padding-top: 20px;
+    justify-content: space-around;
+    background-color: transparent;
+}
+.login::after{
+    position: absolute;
+    content: "";
+    height: 25px;
+    width: 25px;
+    z-index: 0;
+    box-shadow: white;
+}
+.login::before{
+    position: absolute;
+    content: "";
+    height: 25px;
+    width: 25px;
+     
+}
+
+i{
+    color: #121111;
+    z-index: 3;
+}
+
+.fa-arrow-right-to-bracket{
+    color: #200d0d;
+    font-size:25px;
+    position: relative;
+    padding: 20px;
+    
+}
+.fa-arrow-right-to-bracket:hover .login{
+    display: flex;
+    justify-content: space-around;
+}  
+
+button:hover{
+    transform: scale(1.1);
+}
+.icons-login{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 50px;
+    padding-right: 120px;
+}
+hr{
+    color: #146C94;
+    width: 90%;
+    height: 2px;
+    background-color: #146C94;
+}
+p{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header{
+    
+    padding-left:50px ;
+    display: flex;
+}
+ul{
+    list-style: none;
+    display: flex;
+    font-size: 20px;
+        
+}
+.menu{
+    display :flex;
+    align-items: center ;
+    padding-left: 0;
+ 
+}
+.menu ul a{
+    position: relative;
+    color: #000000;
+    font-size: 22px;
+}
+.menu ul a::after{
+    position :absolute;
+    left:0;
+    bottom: -3px;
+    content:"";
+    width: 0%;
+    height:2px;
+    background-color: rgb(4, 4, 4);
+    transition: -0.2s ease-out;
+}
+
+.menu ul a:hover::after{
+    width: 100%;
+}
+li{
+    margin: 30px;
+    text-transform: capitalize;
+}
+.navbar{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-right: 50px;
+    position:fixed;
+    z-index: 3;
+}
+
+a{
+    text-decoration: none;
+    color: #440202;
+}
+.p-accueil{
+    font-style: italic;
+    font-size: 25px;
+    padding-top: 30px;
+    text-align: center;
+}
+h1{
+    color: #19A7CE;
+    font-family: 'Caveat', cursive;
+    text-align: center;
+    font-size: 100px;
+}
+.space{
+    height: 200px;
+}
+.home{
+    width: 90%;
+    height: 2100px;
+    padding-top: 10%;
+    padding-left: 5%;
+}
+.container{
+    width: 520px;
+    height: 550px;
+    box-shadow: 1px 1px 5px #146C94;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    flex-direction: column;
+    align-items: center;
+    float: left;
+    padding-left: 20px;
+}
+.img1{
+    width: 420px;
+    height: 450px;
+    border-radius: 20px;
+}
+.but{
+    border-color: #146C94;
+    background-color: transparent;
+    color: #146C94;
+    border-bottom: 1px solid ;
+}
+.fa-sort-down {
+    color: #0a0909;
+    position: relative;
+    
+}
+.mobile{
+    position: absolute;
+    top: 20px;
+    width: 200px;
+    height: 400px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.height-image{
+    height:500px;
+}
+
+.mobile::after{
+    position:absolute;
+    content:"";
+    z-index: 0;
+
+}
+.mobile::before{
+    position: absolute;
+    content: "";
+}
+.fa-sort-down:hover .mobile{
+    display: flex;
+}
+.orange{
+    width: 175px;
+    cursor: pointer;
+}
+.orange:hover{
+    transform: scale(1.2);
+
+}
+.mvola{
+    width: 175px;
+    cursor: pointer;
+}
+.mvola:hover{
+    transform: scale(1.2);
+}
+.airtel{
+    width: 175px;
+    height: 120px;
+    cursor: pointer;
+}
+.airtel:hover{
+    transform: scale(1.2);
+}
+.reservation{
+    position: absolute;
+    top: 20px;
+    width: 200px;
+    height: 200px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.reservation::after{
+    position:absolute;
+    content:"";
+    z-index: 0;
+
+}
+.reservation::before{
+    position: absolute;
+    content: "";
+}
+.fa-sort-down:hover .reservation{
+    display: flex;
+}
+.reservation .reserve a{
+    font-size: 30px;
+    font-family: 'Bruno Ace', cursive;
+    transform: 0.5s;
+}
+.reservation .reserve a:hover{
+    color: #19A7CE;
+    content: none;
+}
+.res{
+    width: 200px;
+    display: flex;
+   
+}
+.reservation .reserve a{
+    padding-right: 5px;
+}
+.details{
+    font-size: 30px;
+}

@@ -1,0 +1,8 @@
+controllers:
+  resource: ../src/Controller/
+  type: attribute
+
+app_home:
+  path: /home
+  # the controller value has the format 'controller_class::method_name'
+  controller: App\Controller\HomeController::index

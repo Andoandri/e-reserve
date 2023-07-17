@@ -64,7 +64,7 @@
 								<a href="#">contact</a>
 							</li>
 							<li>
-								<a href="#">depot</a>
+								
 								<i class="fa-solid fa-sort-down">
 									<div class="mobile">
 										<a href="#">
@@ -149,9 +149,13 @@
 						</div>
 						<div class="">
 							<div class="confirm">
-								<a href="{{path('app_reservation')}}">
+								<a href="{{path('add_to_reservation', {'id':event.id})}}">
 									<button>Ajouter au panier</button>
-								</a>
+</a>
+<a href="{{path('app_reservation')}}">
+
+									<button>voir au panier</button>
+								
 							</div>
 
 							<div></div>

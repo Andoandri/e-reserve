@@ -9,9 +9,19 @@ use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\User;
 use App\Form\RegisterType;
 use App\Repository\UserRepository;
+use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 class RegisterController extends AbstractController
 {
+
+    private $hashPassword;
+
+
+    public function __construct(UserPasswordHasherInterface $hashPassword)
+    {
+        $this->hashPassword = $hashPassword;
+    }
+
     #[Route('/register', name: 'app_register')]
     public function index(Request $request, UserRepository $userRepo): Response
     {
@@ -22,9 +32,11 @@ class RegisterController extends AbstractController
 
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()){
+        if ($form->isSubmitted() && $form->isValid()) {
 
-            $userRepo->save($user,true);
+            $user->setPassword($this->hashPassword->hashPassword($user, $user->getPassword()));
+
+            $userRepo->save($user, true);
 
             return $this->redirectToRoute('app_home');
         }

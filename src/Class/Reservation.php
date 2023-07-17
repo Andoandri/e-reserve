@@ -24,12 +24,14 @@ class Reservation
         } else {
             $reservation[$id] = 1;
         }
+
         $this->requestStack->getSession()->set('reservation', $reservation);
     }
+
 
     public function get()
     {
         return
-            $this->requestStack->getSession()->get('reservation', []);
+            $this->requestStack->getSession()->get('reservation');
     }
 }

@@ -2,23 +2,25 @@
 html{
     scroll-behavior: smooth;
 }
+
 *{
     margin: 0;
 }
 body{
-    background-color: white;
+    background-color: rgba(251, 246, 246, 0.305);
 }
 img{
     width: 80px;
     height: 80px;
     margin-top: 20px;
     border: 1px white;
+    margin-left: 10%;
 }
 .title{
     font-family: 'Bauhaus 93', cursive;
     text-align: left;
     font-size: 80px;
-    color: rgb(255, 255, 255);
+    color: rgba(14, 9, 9, 0.782);
     z-index: 3;
 }
 .nom{
@@ -84,14 +86,14 @@ i{
     z-index: 3;
 }
 
-.fa-arrow-right-to-bracket{
-    color: #200d0d;
+.fa-bars{
+    color: #f1f0f0;
     font-size:25px;
     position: relative;
     padding: 20px;
     
 }
-.fa-arrow-right-to-bracket:hover .login{
+.fa-bars:hover .login{
     display: flex;
     justify-content: space-around;
 }  
@@ -110,7 +112,7 @@ hr{
     color: #146C94;
     width: 90%;
     height: 2px;
-    background-color: #146C94;
+    background-color: #01080b;
 }
 p{
     font-size: 18px;
@@ -123,32 +125,11 @@ p{
 ul{
     list-style: none;
     display: flex;
-    font-size: 20px;
-    color: #fdfdfd;    
+    font-size: 5px;
+    color: #0a0909c9;    
 }
-.AC:hover{
-    border: solid rgb(255, 98, 0);
-    border-radius: 10px;
-    transition: 500ms;
-    
-}
-.RS:hover{
-    border: solid blue;
-    border-radius: 10px;
-    transition: 500ms;
 
-}
-.CO:hover{
-   border: solid greenyellow;
-    border-radius: 10px;
-    transition: 500ms; 
-}
-.DP:hover{
-    border: solid red;
-    border-radius: 10px;
-    transition: 500ms;
 
-}
 .menu{
     display :flex;
     align-items: center ;
@@ -157,9 +138,9 @@ ul{
 }
 .menu ul a{
     position: relative;
-    color: #ffffff;
-    font-size: 40px;
-    font-family: 'Bauhaus 93';
+    color: #0a0101bb;
+    font-size: 30px;
+    font-family: 'poppins';
 }
 .menu ul a::after{
     position :absolute;
@@ -185,7 +166,9 @@ li{
     justify-content: space-between;
     position:fixed;
     z-index: 3;
-    background-color: #000000;
+    background-color: rgba(41, 41, 41, 0);
+    box-shadow: 0 0 10px orange;
+    
   
 }
 
@@ -193,19 +176,22 @@ a{
     text-decoration: none;
     color: #440202;
 }
+/*Text de bienvenue*/
 .p-accueil{
     font-style: italic;
     font-size: 25px;
-    padding-top: 30px;
+    padding-top: 10px;
     text-align: center;
-
+    color: #ffffff;
 }
 
+/*Bienvenu*/
 h1{
     color: white;
-    font-family: 'Caveat', cursive;
     text-align: center;
     font-size: 100px;
+    padding-top: 250px;
+    font-family: 'Malgun Gothic';
 }
 .space{
     height: 200px;
@@ -339,6 +325,7 @@ h2{
     border-radius: 10px;
     background-image: url(../image/acceuil-img.jpg);
     background-position: center ;
+
     
     -webkit-animation-name: diaporama ;
     -webkit-animation-duration: 10s;
@@ -359,7 +346,7 @@ h2{
     animation-direction: normal;
 
 }
-@webkit-keyframes diaporama{
+@-webkit-keyframes diaporama{
     0% {
         background-image: url(../image/acceuil-img.jpg);
         background-position: center;

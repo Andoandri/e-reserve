@@ -15,35 +15,36 @@
 {% endblock %}
 {% block body %}
 	<html>
+	
 		<div class="card">
-
+			
 			<table class="table">
 				<thead>
 					<tr>
-						<th scope="col">#</th>
-						<th scope="col">First</th>
-						<th scope="col">Last</th>
-						<th scope="col">Handle</th>
+						<th scope="col">Titre</th>
+						<th scope="col">lieu</th>
+						<th scope="col">Paf</th>
+						<th scope="col">Nombre des billets</th>
 					</tr>
 				</thead>
+				
 				<tbody>
+					{% for event in events %}
 					<tr>
-						<th scope="row">1</th>
-						<td>Mark</td>
-						<td>Otto</td>
-						<td>@mdo</td>
+						
+					<td>{{event.event.libelle}}</td>
+
+					<td>{{event.event.Lieu}}</td>
+
+					<td>{{event.event.Paf}}</td>
+					<td>{{event.quantity}}</td>
+
 					</tr>
-					<tr>
-						<th scope="row">2</th>
-						<td>Jacob</td>
-						<td>Thornton</td>
-						<td>@fat</td>
-					</tr>
-					<tr>
-						<th scope="row">3</th>
-						<td colspan="2">Larry the Bird</td>
-						<td>@twitter</td>
-					</tr>
+
+					{% endfor %}
+
+					
+					
 				</tbody>
 			</table>
 		</div>

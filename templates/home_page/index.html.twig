@@ -4,13 +4,13 @@
 {% endblock %}
 
 {% block stylesheets %}
-	<link rel="stylesheet" href="{{asset('css/style.css')}}">
+	<link rel="stylesheet" href={{asset('css/style.css')}}>
 {% endblock %}
 
 {% block head %}
 	<title>E-reserve</title>
-
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+	
+	
 {% endblock %}
 
 {% block body %}
@@ -20,7 +20,9 @@
 		<body>
 			<header class="header">
 				<nav class="navbar">
-
+					<div class="ispm">
+						<img src="{{ asset('image/logo ispm.png')}}">
+					</div>
 					<div class="nom">
 						<div class="logo-reserve">
 							<img src="{{ asset('image/e-reserve.jpg')}}">
@@ -37,68 +39,39 @@
 							</li>
 							<li>
 								<a href="#" class="RS">reservation</a>
-								<i class="fa-solid fa-sort-down">
-									<div class="reservation">
-										<ul class="reserve">
-											<li class="res">
-												<a href="#spectacle">spectacle
-													<i class="fa-solid fa-music"></i>
-												</a>
-											</li>
-											<li class="res">
-												<a href="#transport">transport
-													<i class="fa-solid fa-van-shuttle"></i>
-												</a>
-											</li>
-											<li class="res">
-												<a href="#cinema">cinema
-													<i class="fa-sharp fa-solid fa-film"></i>
-												</a>
-
-											</li>
-											<li class="res">
-												<a href="#">autres...</a>
-											</li>
-										</ul>
-									</div>
-								</i>
+								
 							</li>
 							<li>
 								<a href="#" class="CO">contact</a>
-							</li>
-							<li>
-								<a href="#" class="DP">depot</a>
-								<i class="fa-solid fa-sort-down">
-									<div class="mobile">
-										<a href="#">
-											<img src="../image/orangemoney.png" class="orange"></a>
-										<hr class="ligne">
-										<a href="#"><img src="../image/mvola.png" class="mvola"></a>
-										<hr class="ligne">
-										<a href="#"><img src="../image/airtelmoney.png" class="airtel"></a>
-									</div>
-								</i>
 							</li>
 						</ul>
 					</div>
 
 					<div class="icons-login">
 
-						<i class="fa-solid fa-arrow-right-to-bracket">
-							<div class="login">
-								<a href="{{path('app_login')}}">
+						<i class="fa-solid fa-bars">
+							{% if not is_granted('IS_AUTHENTICATED_FULLY') %}
+								<div class="login">
+									<a href="{{path('app_login')}}">
+									
+										<button>se connecter</button><a/>
+										<hr>
+										<p>
+											<strong>Vous n'avez pas du compte?</strong>
+										</p>
+										<a href="{{path('app_register')}}">
 
-									<button>se connecter</button><a/>
-									<hr>
-									<p>
-										<strong>Vous n'avez pas du compte?</strong>
-									</p>
-									<a href="{{path('app_register')}}">
-
-										<button>créer une compte</button>
-									</a>
+											<button>créer une compte</button>
+										</a>
 								</div>
-							</i>
+							{% else %}
+								<div class="logout">
+									<a href="{{ path('app_logout') }}">Deconnexion</a>
+								</div>
+							{% endif %}
+							
+						</i>
+
 						</div>
 					</nav>
 				</header>
@@ -112,7 +85,7 @@
 					</div>
 
 					<div id="spectacle" class="spectacle">
-						<h2>SPECTACLE</h2>
+						<h2>EVENT</h2>
 						<hr>
 						<br>
 						{% for event in events %}
@@ -135,7 +108,7 @@
 							<div class="row">
 								<div class="col-md-6">
 									<h3>À propos</h3>
-									<p>Insérez ici une brève description de votre entreprise ou de votre site web.</p>
+									<p></p>
 									<h3>Contact</h3>
 									<ul>
 										<li>

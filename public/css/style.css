@@ -14,7 +14,10 @@ img{
     height: 80px;
     margin-top: 20px;
     border: 1px white;
-    margin-left: 10%;
+  
+}
+.ispm{
+    padding-right: 35px;
 }
 .title{
     font-family: 'Bauhaus 93', cursive;
@@ -33,6 +36,9 @@ img{
     justify-content: center;
     
 }
+.img2{
+    border-radius: 50px;
+}
 
 button{
     margin-left: 10px;
@@ -41,9 +47,9 @@ button{
     padding: 10px 10px 10px 10px;
     border-radius: 50px;
     cursor: pointer;
-    background-color: #146C94;
-    border-bottom: white;
-    color: #F6F1F1;
+    background-color: #eef3f6;
+    border-bottom: rgb(10, 7, 7);
+    color: #0d0a0a;
     text-transform: uppercase;
 
 }
@@ -87,11 +93,11 @@ i{
 }
 
 .fa-bars{
-    color: #f1f0f0;
+    color: #060606;
     font-size:25px;
     position: relative;
-    padding: 20px;
-    
+    margin-top: 45px;
+
 }
 .fa-bars:hover .login{
     display: flex;
@@ -139,7 +145,7 @@ ul{
 .menu ul a{
     position: relative;
     color: #0a0101bb;
-    font-size: 30px;
+    font-size: 25px;
     font-family: 'poppins';
 }
 .menu ul a::after{
@@ -167,7 +173,7 @@ li{
     position:fixed;
     z-index: 3;
     background-color: rgba(41, 41, 41, 0);
-    box-shadow: 0 0 10px orange;
+    box-shadow: 0 0 10px rgba(197, 151, 24, 0.635);
     
   
 }
@@ -199,25 +205,27 @@ h1{
 .home{
     width: auto;
     height: 2100px;
-
+    
 }
 
 .container{
-    width: 520px;
+    width: 500px;
     height: 550px;
-    box-shadow: 1px 1px 5px #146C94;
+    box-shadow: 1px 1px 5px #0d0f10ce;
     display: flex;
     justify-content: center;
     border-radius: 20px;
     flex-direction: column;
     align-items: center;
     float: left;
-    padding-left: 20px;
+    padding-left: 40px;
 }
 .img1{
     width: 420px;
     height: 450px;
     border-radius: 20px;
+    align-items: center;
+    justify-content: center;
 }
 .but{
     border-color: #146C94;
@@ -225,103 +233,14 @@ h1{
     color: #146C94;
     border-bottom: 1px solid ;
 }
-.fa-sort-down {
-    color: #0a0909;
-    position: relative;
     
-}
-.mobile{
-    position: absolute;
-    top: 20px;
-    width: 200px;
-    height: 400px;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.mobile::after{
-    position:absolute;
-    content:"";
-    z-index: 0;
-
-}
-.mobile::before{
-    position: absolute;
-    content: "";
-}
-.fa-sort-down:hover .mobile{
-    display: flex;
-}
-.orange{
-    width: 175px;
-    cursor: pointer;
-}
-.orange:hover{
-    transform: scale(1.2);
-
-}
-.mvola{
-    width: 175px;
-    cursor: pointer;
-}
-.mvola:hover{
-    transform: scale(1.2);
-}
-.airtel{
-    width: 175px;
-    height: 120px;
-    cursor: pointer;
-}
-.airtel:hover{
-    transform: scale(1.2);
-}
-.reservation{
-    position: absolute;
-    top: 20px;
-    width: 200px;
-    height: 200px;
-    display: none;
-    justify-content: center;
-    align-items: center;
-}
-.reservation::after{
-    position:absolute;
-    content:"";
-    z-index: 0;
-
-}
-.reservation::before{
-    position: absolute;
-    content: "";
-}
-.fa-sort-down:hover .reservation{
-    display: flex;
-}
-.reservation .reserve a{
-    font-size: 30px;
-    font-family: 'Bruno Ace', cursive;
-    transform: 0.5s;
-}
-.reservation .reserve a:hover{
-    color: #19A7CE;
-    content: none;
-}
-.res{
-    width: 200px;
-    display: flex;
-   
-}
-.reservation .reserve a{
-    padding-right: 5px;
-}
 h2{
-    color: #146C94;
+    color: #07040193;
     font-size: 40px;
 }
 .accueil{
     height: 780px;
-    box-shadow: 2px 2px 5px #146C94;
+    box-shadow: 2px 2px 5px #00080be7;
     border-radius: 10px;
     background-image: url(../image/acceuil-img.jpg);
     background-position: center ;
@@ -383,42 +302,63 @@ h2{
     66% {background-image: url(../image/taxibruse.jpg);}
     
 }
-.spectacle{
-    height: 700px;
+.recent{
+    display:block;
+    margin-left: 30px;
+    height: 620px;
 }
-.transport{
-    height: 700px;
+.spectacle{
+    display:block;
+    margin-left: 30px;
+    height: 620px;
+}
+.voyage{
+    display:block;
+    margin-left: 30px;
+    height: 620px;
 }
 .cinema{
-    height: 700px;
+    display:block;
+    margin-left: 30px;
+    height: 620px;
+}
+.autres{
+    display:block;
+    margin-left: 30px;
+    height: 620px;
+}
+.h3{
+    color:rgb(10, 7, 7);
+    font-size: 50px;
 }
 footer {
-    background-color: #000000;
-    padding: 20px 0;
-    color: #F6F1F1;
+    background-color: #0000006f;
+    padding: 20px ;
+    color: #191212db;
+    margin-top:100%;
   }
 
-  footer h3 {
+footer h3 {
     font-size: 18px;
     margin-bottom: 15px;
   }
 
-  footer p {
+footer p {
     font-size: 14px;
     margin-bottom: 15px;
   }
 
-  footer ul {
+footer ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
   }
 
-  footer ul li {
+footer ul li {
     margin-bottom: 10px;
   }
 
-  footer ul li i {
+footer ul li i {
     margin-right: 5px;
-    color: #888;
+    color: #f9f3f3;
   }

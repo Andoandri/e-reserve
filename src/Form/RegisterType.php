@@ -15,7 +15,7 @@ class RegisterType extends AbstractType
         $builder
             ->add('email')
             ->add('password')
-            ->add('username')
+            ->add('name')
             ->add('adress')
             ->add('tel')
             ->add('Enregistrer', SubmitType::class, [

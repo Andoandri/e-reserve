@@ -8,20 +8,121 @@
 		</title>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta
-		name="viewport" content="width=device-width, initiale-scape=1.0">
-
+		<meta name="viewport" content="width=device-width, initiale-scape=1.0">
+	
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
 		{# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
 		{% block stylesheets %}
 			{{ encore_entry_link_tags('app') }}
-		{% endblock %}
+				<link rel="stylesheet" href={{ asset ('css/style.css')}}>
+			{% endblock %}
 
 		{% block javascripts %}
 			{{ encore_entry_script_tags('app') }}
 		{% endblock %}
 	</head>
 	<body>
-		{% block body %}{% endblock %}
+		<header class="header">
+			<nav class="navbar">
+				
+				<div class="nom">
+					<div class="logo-reserve">
+						<img src="{{ asset('image/e-reserve.jpg')}}" class="img2">
+
+					</div>
+					<span class="title">
+						E-reserve</span>
+				</div>
+				
+				<div class="menu">
+					<ul>
+						<li><a href="#acceuil" class="AC">Accueil</a></li>
+						<li><a href="#" class="RS">reservation</a></li>
+						<li><a href="#" class="CO">contact</a></li>
+					</ul>
+				</div>
+				<div class="icons-login">
+
+					<i class="fa-solid fa-bars">
+						{% if not is_granted('IS_AUTHENTICATED_FULLY') %}
+							<div class="login">
+								<a href="{{path('app_login')}}">
+
+									<button>se connecter</button><a/>
+									<hr>
+									<p>
+										<strong>Vous n'avez pas du compte?</strong>
+									</p>
+									<a href="{{path('app_register')}}">
+
+										<button>créer une compte</button>
+									</a>
+								</div>
+							{% else %}
+								<div class="logout">
+									<a href="{{ path('app_logout') }}">Deconnexion</a>
+								</div>
+							{% endif %}
+
+						</i>
+				</div>
+
+				
+				<div class="ispm">
+					<img src="{{ asset('image/logo ispm.png')}}">
+				</div>
+
+			</nav>
+		</header>
+			{% block body %}{% endblock %}
+
+		<footer>
+			<div class="container2">
+				<div class="row">
+					<div class="col-md-6">
+						<h3>À propos</h3>
+						<p></p>
+						<h3>Contact</h3>
+						<ul>
+							<li>
+								<i class="fa fa-envelope"></i>
+								E-reserve@gmail.com</li>
+							<li>
+								<i class="fa fa-phone"></i>
+								034 56 281 95  -  034 21 956 70</li>
+						</ul>
+					</div>
+					<div class="col-md-6">
+						<h3>Suivez-nous</h3>
+						<ul class="social-media">
+							<li>
+								<a href="#">
+									<i class="fa-brands fa-facebook"></i>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa-brands fa-twitter"></i>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa-brands fa-instagram"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="bottom-footer">
+						<p>Tous droits réservés &copy; 2023 | Site réalisé par
+							<a href="#">IMTICIA 1 de l'ISPM</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		
+
 	</body>
 </html>

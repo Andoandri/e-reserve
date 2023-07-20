@@ -4,96 +4,85 @@
 {% endblock %}
 
 {% block stylesheets %}
-	<link rel="stylesheet" href="{{asset('css/inscription.css')}}">
+	<link rel="stylesheet" href="{{asset('css/style.css')}}">
 {% endblock %}
 
 {% block body %}
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-</head>
-<header class="header">
-	<nav class="navbar">
-		<div class=" logo-ispm">
-			<img src="../image/logo ispm.png">
-		</div>
-		<div class="logo-reserve">
-			<img src="../image/e-reserve.jpg">
-			<span class="title">E-reserve</span>
-		</div>
-
-	</nav>
-</header>
-<body>
 	{{form_start(form)}}
-	<div class="container">
-		<div class="card">
+	<div class="card">
+		
 			<div class="legend">
-				<legend>Inscription</legend>
+				<h3>Inscription</legend>
 			</div>
-			<div class="card-container">
-				<div class="mt-50">
-					<div class="w-50 ">
+		<div class="form">
+				<div class="div2">
+					<label for="inputEmail">Entrer votre nom:</label>
+
 						{{form_widget(form.name, {
                                             'attr' : {
-                                                'placeholder':'@votre nom ici',
-                                                'class':'form-complet'
+                                                'class':'form-control'
                                             } 
                                     })}}
-					</div>
+					
 				</div>
-				<div class="mt-50">
-					<div class="w-50 ">
+				<div class="div2">
+					<label for="inputEmail">Entrer votre adresse email:</label>
+
 						{{form_widget(form.email, {
                                             'attr' : {
-                                                'placeholder':'@votre email',
-                                                'class':'form-complet'
+                                                'class':'form-control'
                                             } 
                                     })}}
-					</div>
+					
 				</div>
 
-				<div class="mt-50">
-					<div class="w-50 ">
+				<div class="div2">
+
+					<label for="inputEmail">Entrer votre mot de passe:</label>
+
 						{{form_widget(form.password, {
                                             'attr' : {
-                                                'placeholder':'@votre mot de passe ici',
-                                                'class':'form-complet'
+                                                'class':'form-control'
                                             } 
                                     })}}
-					</div>
+					
 				</div>
-				<div class="mt-50">
-					<div class="w-50 ">
+				<div class="div2">
+					<label for="inputEmail">Enter votre telephone:</label>
+
 						{{form_widget(form.tel, {
                                             'attr' : {
-                                                'placeholder':'@votre telephone',
-                                                'class':'form-complet'
+                	                            'class':'form-control'
                                             } 
                                     })}}
-					</div>
+					
 				</div>
-				<div class="mt-50">
-					<div class="w-50 ">
+				<div class="div2">
+					<label for="inputEmail"> Enter votre adresse :</label>
+
 						{{form_widget(form.adress, {
                                             'attr' : {
-                                                'placeholder':'@votre adresse',
-                                                'class':'form-complet'
+                                                'class':'form-control'
                                             } 
                                     })}}
-					</div>
+					
 				</div>
-				<div class="mt-50">
-					<div class="w-50 ">
+			</div>
+				<div class="bouton">
+
 						{{form_widget(form.Enregistrer, {
                                             'attr' : {
-                                                'class':'btn-register'
+                                                'class':'btn'
                                             } 
                                     })}}
-					</div>
+					
 				</div>
 				<br/><br/>
-			</div>
-		</div>
+			
+		
 	</div>
+
 	{{form_end(form)}}
-</body>{% endblock %}
+{% endblock %}

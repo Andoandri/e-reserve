@@ -14,7 +14,10 @@ img{
     height: 80px;
     margin-top: 20px;
     border: 1px white;
-    margin-left: 10%;
+  
+}
+.ispm{
+    padding-right: 35px;
 }
 .title{
     font-family: 'Bauhaus 93', cursive;
@@ -33,6 +36,9 @@ img{
     justify-content: center;
     
 }
+.img2{
+    border-radius: 50px;
+}
 
 button{
     margin-left: 10px;
@@ -41,9 +47,9 @@ button{
     padding: 10px 10px 10px 10px;
     border-radius: 50px;
     cursor: pointer;
-    background-color: #146C94;
-    border-bottom: white;
-    color: #F6F1F1;
+    background-color: rgba(197, 151, 24, 0.635);
+    border-bottom: rgb(11, 11, 10);
+    color: #efecec;
     text-transform: uppercase;
 
 }
@@ -86,12 +92,11 @@ i{
     z-index: 3;
 }
 
-.fa-bars{
-    color: #f1f0f0;
+.fa-bars::before{
+    color: #060606;
     font-size:25px;
     position: relative;
-    padding: 20px;
-    
+
 }
 .fa-bars:hover .login{
     display: flex;
@@ -107,6 +112,7 @@ button:hover{
     justify-content: right;
     width: 50px;
     padding-right: 120px;
+    
 }
 hr{
     color: #146C94;
@@ -139,7 +145,7 @@ ul{
 .menu ul a{
     position: relative;
     color: #0a0101bb;
-    font-size: 30px;
+    font-size: 25px;
     font-family: 'poppins';
 }
 .menu ul a::after{
@@ -167,8 +173,8 @@ li{
     position:fixed;
     z-index: 3;
     background-color: rgba(41, 41, 41, 0);
-    box-shadow: 0 0 10px orange;
-    
+    box-shadow: 0 0 10px rgba(197, 151, 24, 0.635);
+    background-color: rgba(245, 245, 245, 0.905);
   
 }
 
@@ -199,129 +205,36 @@ h1{
 .home{
     width: auto;
     height: 2100px;
-
+    
 }
 
 .container{
-    width: 520px;
+    width: 500px;
     height: 550px;
-    box-shadow: 1px 1px 5px #146C94;
+    box-shadow: 1px 1px 5px #0d0f10ce;
     display: flex;
     justify-content: center;
     border-radius: 20px;
     flex-direction: column;
     align-items: center;
     float: left;
-    padding-left: 20px;
+    padding-left: 40px;
 }
 .img1{
     width: 420px;
     height: 450px;
     border-radius: 20px;
+    align-items: center;
+    justify-content: center;
 }
-.but{
-    border-color: #146C94;
-    background-color: transparent;
-    color: #146C94;
-    border-bottom: 1px solid ;
-}
-.fa-sort-down {
-    color: #0a0909;
-    position: relative;
     
-}
-.mobile{
-    position: absolute;
-    top: 20px;
-    width: 200px;
-    height: 400px;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.mobile::after{
-    position:absolute;
-    content:"";
-    z-index: 0;
-
-}
-.mobile::before{
-    position: absolute;
-    content: "";
-}
-.fa-sort-down:hover .mobile{
-    display: flex;
-}
-.orange{
-    width: 175px;
-    cursor: pointer;
-}
-.orange:hover{
-    transform: scale(1.2);
-
-}
-.mvola{
-    width: 175px;
-    cursor: pointer;
-}
-.mvola:hover{
-    transform: scale(1.2);
-}
-.airtel{
-    width: 175px;
-    height: 120px;
-    cursor: pointer;
-}
-.airtel:hover{
-    transform: scale(1.2);
-}
-.reservation{
-    position: absolute;
-    top: 20px;
-    width: 200px;
-    height: 200px;
-    display: none;
-    justify-content: center;
-    align-items: center;
-}
-.reservation::after{
-    position:absolute;
-    content:"";
-    z-index: 0;
-
-}
-.reservation::before{
-    position: absolute;
-    content: "";
-}
-.fa-sort-down:hover .reservation{
-    display: flex;
-}
-.reservation .reserve a{
-    font-size: 30px;
-    font-family: 'Bruno Ace', cursive;
-    transform: 0.5s;
-}
-.reservation .reserve a:hover{
-    color: #19A7CE;
-    content: none;
-}
-.res{
-    width: 200px;
-    display: flex;
-   
-}
-.reservation .reserve a{
-    padding-right: 5px;
-}
 h2{
-    color: #146C94;
+    color: #07040193;
     font-size: 40px;
 }
 .accueil{
     height: 780px;
-    box-shadow: 2px 2px 5px #146C94;
+    box-shadow: 2px 2px 5px #00080be7;
     border-radius: 10px;
     background-image: url(../image/acceuil-img.jpg);
     background-position: center ;
@@ -383,42 +296,119 @@ h2{
     66% {background-image: url(../image/taxibruse.jpg);}
     
 }
-.spectacle{
-    height: 700px;
+.recent{
+    display:block;
+    margin-left: 30px;
+    height: 620px;
 }
-.transport{
-    height: 700px;
+.spectacle{
+    display:block;
+    margin-left: 30px;
+    height: 620px;
+}
+.voyage{
+    display:block;
+    margin-left: 30px;
+    height: 620px;
 }
 .cinema{
-    height: 700px;
+    display:block;
+    margin-left: 30px;
+    height: 620px;
 }
+.autres{
+    display:block;
+    margin-left: 30px;
+    height: 620px;
+}
+/*page-login*/
+.card{
+    margin-top: 50px;
+    padding-top: 117px;
+    width: 50%;
+    height: 700px;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+.legend{
+    height: 100px;   
+}
+h3{
+    color:rgb(10, 7, 7);
+    font-size: 60px;
+    text-align: center;
+}
+.form{
+    padding-top: 50px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;   
+    justify-content: center;
+}
+.form-control{
+    font-size: 25px;
+    border-radius: 5px;
+    width: 350px;
+    border-color: rgba(10, 9, 9, 0.426) ;
+    color: #000608;
+    outline: none;
+}
+label{
+    font-size: 25px;
+    justify-content: left;
+}
+.div1{
+    display: flex;
+    flex-direction: column;
+}
+.div2{
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+}
+.bouton{
+    display: flex;
+    justify-content: right;
+    margin-right: 200px;
+    padding-top: 80px;
+}
+.mdp-o{
+    height: 100px;
+    padding-left: 30%;
+    padding-top: 50px;
+}
+.p3{
+    font-size: 25px;
+}
+/*page-login*/
 footer {
-    background-color: #000000;
-    padding: 20px 0;
-    color: #F6F1F1;
+    background-color: #0000006f;
+    padding: 20px ;
+    color: #191212db;
+    margin-top: 100%;
   }
 
-  footer h3 {
+footer h3 {
     font-size: 18px;
     margin-bottom: 15px;
   }
 
-  footer p {
+footer p {
     font-size: 14px;
     margin-bottom: 15px;
   }
 
-  footer ul {
+footer ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
   }
 
-  footer ul li {
+footer ul li {
     margin-bottom: 10px;
   }
 
-  footer ul li i {
+footer ul li i {
     margin-right: 5px;
-    color: #888;
+    color: #f9f3f3;
   }

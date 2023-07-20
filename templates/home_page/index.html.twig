@@ -9,73 +9,12 @@
 
 {% block head %}
 	<title>E-reserve</title>
-	
-	
 {% endblock %}
 
 {% block body %}
 
 	<html lang="en">
-		<head></head>
-		<body>
-			<header class="header">
-				<nav class="navbar">
-					<div class="ispm">
-						<img src="{{ asset('image/logo ispm.png')}}">
-					</div>
-					<div class="nom">
-						<div class="logo-reserve">
-							<img src="{{ asset('image/e-reserve.jpg')}}">
-
-						</div>
-						<span class="title">
-							E-reserve</span>
-					</div>
-
-					<div class="menu">
-						<ul>
-							<li>
-								<a href="#acceuil" class="AC">Accueil</a>
-							</li>
-							<li>
-								<a href="#" class="RS">reservation</a>
-								
-							</li>
-							<li>
-								<a href="#" class="CO">contact</a>
-							</li>
-						</ul>
-					</div>
-
-					<div class="icons-login">
-
-						<i class="fa-solid fa-bars">
-							{% if not is_granted('IS_AUTHENTICATED_FULLY') %}
-								<div class="login">
-									<a href="{{path('app_login')}}">
-									
-										<button>se connecter</button><a/>
-										<hr>
-										<p>
-											<strong>Vous n'avez pas du compte?</strong>
-										</p>
-										<a href="{{path('app_register')}}">
-
-											<button>créer une compte</button>
-										</a>
-								</div>
-							{% else %}
-								<div class="logout">
-									<a href="{{ path('app_logout') }}">Deconnexion</a>
-								</div>
-							{% endif %}
-							
-						</i>
-
-						</div>
-					</nav>
-				</header>
-
+		
 				<div class="home">
 					<div id="acceuil" class="accueil">
 						<section class="section1">
@@ -84,8 +23,8 @@
 						</section>
 					</div>
 
-					<div id="spectacle" class="spectacle">
-						<h2>EVENT</h2>
+					<div id="recent" class="recent">
+						<h2>RECENT</h2>
 						<hr>
 						<br>
 						{% for event in events %}
@@ -103,52 +42,88 @@
 							{% endif %}
 						{% endfor %}
 					</div>
-					<footer>
-						<div class="container2">
-							<div class="row">
-								<div class="col-md-6">
-									<h3>À propos</h3>
-									<p></p>
-									<h3>Contact</h3>
-									<ul>
-										<li>
-											<i class="fa fa-envelope"></i>
-											E-reserve@gmail.com</li>
-										<li>
-											<i class="fa fa-phone"></i>
-											034 56 281 95  -  034 21 956 70</li>
-									</ul>
-								</div>
-								<div class="col-md-6">
-									<h3>Suivez-nous</h3>
-									<ul class="social-media">
-										<li>
-											<a href="#">
-												<i class="fa-brands fa-facebook"></i>
+
+						<div id="spectacle" class="spectacle">
+							<h2>SPECTACLE</h2>
+							<hr>
+							<br>
+							{% for event in events %}
+								{% if event.isActive == true %}
+									<div class="container">
+										<img src="{{asset('upload/images/events/'~ event.image)}}" class="img1">
+
+										<br/>
+										<div class="butt">
+											<a href="{{path('app_eventplus', {'id':event.id})}}">
+												<button class="but">En savoir plus</button>
 											</a>
-										</li>
-										<li>
-											<a href="#">
-												<i class="fa-brands fa-twitter"></i>
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												<i class="fa-brands fa-instagram"></i>
-											</a>
-										</li>
-									</ul>
-								</div>
-								<div class="bottom-footer">
-									<p>Tous droits réservés &copy; 2023 | Site réalisé par
-										<a href="#">IMTICIA 1 de l'ISPM</a>
-									</p>
-								</div>
-							</div>
+										</div>
+									</div>
+								{% endif %}
+							{% endfor %}
 						</div>
-					</footer>
+						
+						<div id="voyage" class="voyage">
+							<h2>VOYAGE</h2>
+							<hr>
+							<br>
+							{% for event in events %}
+								{% if event.isActive == true %}
+									<div class="container">
+										<img src="{{asset('upload/images/events/'~ event.image)}}" class="img1">
+
+										<br/>
+										<div class="butt">
+											<a href="{{path('app_eventplus', {'id':event.id})}}">
+												<button class="but">En savoir plus</button>
+											</a>
+										</div>
+									</div>
+								{% endif %}
+							{% endfor %}
+						</div>
+						
+						<div id="cinema" class="cinema">
+							<h2>CINEMA</h2>
+							<hr>
+							<br>
+							{% for event in events %}
+								{% if event.isActive == true %}
+									<div class="container">
+										<img src="{{asset('upload/images/events/'~ event.image)}}" class="img1">
+
+										<br/>
+										<div class="butt">
+											<a href="{{path('app_eventplus', {'id':event.id})}}">
+												<button class="but">En savoir plus</button>
+											</a>
+										</div>
+									</div>
+								{% endif %}
+							{% endfor %}
+						</div>
+					<div id="autres" class="autres">
+						<h2>AUTRES...</h2>
+						<hr>
+						<br>
+						{% for event in events %}
+							{% if event.isActive == true %}
+								<div class="container">
+									<img src="{{asset('upload/images/events/'~ event.image)}}" class="img1">
+
+									<br/>
+									<div class="butt">
+										<a href="{{path('app_eventplus', {'id':event.id})}}">
+											<button class="but">En savoir plus</button>
+										</a>
+									</div>
+								</div>
+							{% endif %}
+						{% endfor %}
+					</div>
+
+					
 				</div>
-			</body>
 		</body>
 	</html>
 

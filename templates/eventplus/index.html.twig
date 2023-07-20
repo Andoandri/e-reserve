@@ -4,101 +4,14 @@
 {% endblock %}
 
 {% block stylesheets %}
-	<link rel="stylesheet" href="{{asset('css/event.css')}}">
-	<link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.css')}}">
-	<link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.min.css')}}">
+	<link rel="stylesheet" href="{{asset('css/style.css')}}">
+	{#<link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.css')}}">
+	<link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.min.css')}}">#}
 {% endblock %}
 
 {% block body %}
 	<html lang="en">
-		<head></head>
-		<body>
-			<header class="header">
-				<nav class="navbar">
-					<div class=" logo-ispm">
-						<img src="{{asset('image/logo ispm.png')}}">
-					</div>
-					<div class="nom">
-						<div class="logo-reserve">
-							<img src="{{ asset('image/e-reserve.jpg')}}">
 
-						</div>
-						<span class="title">
-							E-reserve</span>
-					</div>
-
-					<div class="menu">
-						<ul>
-							<li>
-								<a href="#acceuil">Accueil</a>
-							</li>
-							<li>
-								<a href="#">reservation</a>
-								<i class="fa-solid fa-sort-down">
-									<div class="reservation">
-										<ul class="reserve">
-											<li class="res">
-												<a href="#spectacle">spectacle
-													<i class="fa-solid fa-music"></i>
-												</a>
-											</li>
-											<li class="res">
-												<a href="#transport">transport
-													<i class="fa-solid fa-van-shuttle"></i>
-												</a>
-											</li>
-											<li class="res">
-												<a href="#cinema">cinema
-													<i class="fa-sharp fa-solid fa-film"></i>
-												</a>
-
-											</li>
-											<li class="res">
-												<a href="#">autres...</a>
-											</li>
-										</ul>
-									</div>
-								</i>
-							</li>
-							<li>
-								<a href="#">contact</a>
-							</li>
-							<li>
-								
-								<i class="fa-solid fa-sort-down">
-									<div class="mobile">
-										<a href="#">
-											<img src="../image/orangemoney.png" class="orange"></a>
-										<hr class="ligne">
-										<a href="#"><img src="../image/mvola.png" class="mvola"></a>
-										<hr class="ligne">
-										<a href="#"><img src="../image/airtelmoney.png" class="airtel"></a>
-									</div>
-								</i>
-							</li>
-						</ul>
-					</div>
-
-					<div class="icons-login">
-
-						<i class="fa-solid fa-arrow-right-to-bracket">
-							<div class="login">
-								<a href="{{path('app_login')}}">
-
-									<button>se connecter</button><a/>
-									<hr>
-									<p>
-										<strong>Vous n'avez pas du compte?</strong>
-									</p>
-									<a href="{{path('app_register')}}">
-
-										<button>créer une compte</button>
-									</a>
-								</div>
-							</i>
-						</div>
-					</nav>
-				</header>
 				<div class="d-flex justify-content-center">
 					<div class="row justify-content-center flex-column">
 						<div class="card d-flex-column m-2 justify-content-center">

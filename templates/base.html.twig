@@ -9,8 +9,8 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initiale-scape=1.0">
+	
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-
 
 		{# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
 		{% block stylesheets %}
@@ -42,17 +42,32 @@
 						<li><a href="#" class="CO">contact</a></li>
 					</ul>
 				</div>
-				<i class="fa-solid fa-bars">
-					{% if  is_granted('IS_AUTHENTICATED_FULLY') %}
-						<button class="btn-success text-white-50">
-							<h5>
-								<a class="text-white" href="{{ path('app_logout') }}">Deconnexion</a>
-							</h5>
-						</button>
-					{% endif %}
+				<div class="icons-login">
 
-				</i>
-				
+					<i class="fa-solid fa-bars">
+						{% if not is_granted('IS_AUTHENTICATED_FULLY') %}
+							<div class="login">
+								<a href="{{path('app_login')}}">
+
+									<button>se connecter</button><a/>
+									<hr>
+									<p>
+										<strong>Vous n'avez pas du compte?</strong>
+									</p>
+									<a href="{{path('app_register')}}">
+
+										<button>créer une compte</button>
+									</a>
+								</div>
+							{% else %}
+								<div class="logout">
+									<a href="{{ path('app_logout') }}">Deconnexion</a>
+								</div>
+							{% endif %}
+
+						</i>
+				</div>
+
 				
 				<div class="ispm">
 					<img src="{{ asset('image/logo ispm.png')}}">

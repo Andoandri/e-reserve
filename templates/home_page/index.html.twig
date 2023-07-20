@@ -9,46 +9,12 @@
 
 {% block head %}
 	<title>E-reserve</title>
-	
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 {% endblock %}
 
 {% block body %}
 
 	<html lang="en">
 		
-		<body>
-			
-
-					<div class="icons-login">
-
-						<i class="fa-solid fa-bars">
-							{% if not is_granted('IS_AUTHENTICATED_FULLY') %}
-								<div class="login">
-									<a href="{{path('app_login')}}">
-									
-										<button>se connecter</button><a/>
-										<hr>
-										<p>
-											<strong>Vous n'avez pas du compte?</strong>
-										</p>
-										<a href="{{path('app_register')}}">
-
-											<button>créer une compte</button>
-										</a>
-								</div>
-							{% else %}
-								<div class="logout">
-									<a href="{{ path('app_logout') }}">Deconnexion</a>
-								</div>
-							{% endif %}
-							
-						</i>
-
-						</div>
-					</nav>
-				</header>
-
 				<div class="home">
 					<div id="acceuil" class="accueil">
 						<section class="section1">

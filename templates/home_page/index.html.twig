@@ -26,103 +26,30 @@
 					<div id="recent" class="recent">
 						<h2>RECENT</h2>
 						<hr>
-						<br>
-						{% for event in events %}
-							{% if event.isActive == true %}
-								<div class="container">
-									<img src="{{asset('upload/images/events/'~ event.image)}}" class="img1">
+						</br>
+						{% for categorie in categories %}
+							<h2>
+							{{categorie.libelle}}</h2>
+							
+							<div class="separate">
+							{% for event in categorie.events %}
+								{% if event.isActive == true %}
+									<div class="container">
+										<img src="{{asset('upload/images/events/'~ event.image)}}" class="img1">
 
-									<br/>
-									<div class="butt">
-										<a href="{{path('app_eventplus', {'id':event.id})}}">
-											<button class="but">En savoir plus</button>
-										</a>
+										<br/>
+										<div class="butt">
+											<a href="{{path('app_eventplus', {'id':event.id})}}">
+												<button class="but">En savoir plus</button>
+											</a>
+										</div>
 									</div>
-								</div>
-							{% endif %}
+								{% endif %}
+							{% endfor %}
+							</div>
+						</br>
 						{% endfor %}
 					</div>
-
-						<div id="spectacle" class="spectacle">
-							<h2>SPECTACLE</h2>
-							<hr>
-							<br>
-							{% for event in events %}
-								{% if event.isActive == true %}
-									<div class="container">
-										<img src="{{asset('upload/images/events/'~ event.image)}}" class="img1">
-
-										<br/>
-										<div class="butt">
-											<a href="{{path('app_eventplus', {'id':event.id})}}">
-												<button class="but">En savoir plus</button>
-											</a>
-										</div>
-									</div>
-								{% endif %}
-							{% endfor %}
-						</div>
-						
-						<div id="voyage" class="voyage">
-							<h2>VOYAGE</h2>
-							<hr>
-							<br>
-							{% for event in events %}
-								{% if event.isActive == true %}
-									<div class="container">
-										<img src="{{asset('upload/images/events/'~ event.image)}}" class="img1">
-
-										<br/>
-										<div class="butt">
-											<a href="{{path('app_eventplus', {'id':event.id})}}">
-												<button class="but">En savoir plus</button>
-											</a>
-										</div>
-									</div>
-								{% endif %}
-							{% endfor %}
-						</div>
-						
-						<div id="cinema" class="cinema">
-							<h2>CINEMA</h2>
-							<hr>
-							<br>
-							{% for event in events %}
-								{% if event.isActive == true %}
-									<div class="container">
-										<img src="{{asset('upload/images/events/'~ event.image)}}" class="img1">
-
-										<br/>
-										<div class="butt">
-											<a href="{{path('app_eventplus', {'id':event.id})}}">
-												<button class="but">En savoir plus</button>
-											</a>
-										</div>
-									</div>
-								{% endif %}
-							{% endfor %}
-						</div>
-					<div id="autres" class="autres">
-						<h2>AUTRES...</h2>
-						<hr>
-						<br>
-						{% for event in events %}
-							{% if event.isActive == true %}
-								<div class="container">
-									<img src="{{asset('upload/images/events/'~ event.image)}}" class="img1">
-
-									<br/>
-									<div class="butt">
-										<a href="{{path('app_eventplus', {'id':event.id})}}">
-											<button class="but">En savoir plus</button>
-										</a>
-									</div>
-								</div>
-							{% endif %}
-						{% endfor %}
-					</div>
-
-					
 				</div>
 		</body>
 	</html>

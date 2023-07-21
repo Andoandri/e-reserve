@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Acme&family=Cambay:ital@1&display=swap');
+@import "~font-awesome/css/all.css";
 html{
     scroll-behavior: smooth;
 }
@@ -44,12 +45,13 @@ button{
     margin-left: 10px;
     margin-right: 10px;
     font-size: 16px;
+    font-weight: 600;
     padding: 10px 10px 10px 10px;
     border-radius: 50px;
     cursor: pointer;
-    background-color: rgba(197, 151, 24, 0.635);
+    background-color: rgba(231, 206, 137, 0.635);
     border-bottom: rgb(11, 11, 10);
-    color: #efecec;
+    color: #0c0202;
     text-transform: uppercase;
 
 }
@@ -58,8 +60,8 @@ button:hover{
 }
 .login{
     position: absolute;
-    right: -22px;
-    top: 50px;
+    margin-right: -50px;
+    top: 100px;
     width: 300px;
     height: 250px;
     flex-direction: column;
@@ -86,7 +88,36 @@ button:hover{
     width: 25px;
      
 }
-
+.logout{
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    width: 300px;
+    height: 250px;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 8px white;
+    border-radius: 6px;
+    display:none;
+    padding-top: 20px;
+    justify-content: space-around;
+    background-color: transparent;
+}
+.logout::after{
+    position: absolute;
+    content: "";
+    height: 25px;
+    width: 25px;
+    z-index: 0;
+    box-shadow: white;
+}
+.logout::before{
+    position: absolute;
+    content: "";
+    height: 25px;
+    width: 25px;
+     
+}
 i{
     color: #121111;
     z-index: 3;
@@ -95,7 +126,6 @@ i{
 .fa-bars::before{
     color: #060606;
     font-size:25px;
-    position: relative;
 
 }
 .fa-bars:hover .login{
@@ -124,6 +154,9 @@ p{
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
 }
+h2{
+    font-family: 'Malgun Gothic' ;
+}
 .header{
     
     display: flex;
@@ -148,7 +181,7 @@ ul{
     font-size: 25px;
     font-family: 'poppins';
 }
-.menu ul a::after{
+.menu ul a.hover::after{
     position :absolute;
     left:0;
     bottom: -3px;
@@ -219,6 +252,9 @@ h1{
     align-items: center;
     float: left;
     padding-left: 40px;
+    margin-left: 100px;
+    margin-top: 40px;
+
 }
 .img1{
     width: 420px;
@@ -297,8 +333,10 @@ h2{
     
 }
 .recent{
-    display:block;
-    margin-left: 30px;
+    display: flex;
+   flex-direction: column;
+    margin-left: 130px;
+    margin-top:70px;
     height: 620px;
 }
 .spectacle{
@@ -306,20 +344,9 @@ h2{
     margin-left: 30px;
     height: 620px;
 }
-.voyage{
-    display:block;
-    margin-left: 30px;
-    height: 620px;
-}
-.cinema{
-    display:block;
-    margin-left: 30px;
-    height: 620px;
-}
-.autres{
-    display:block;
-    margin-left: 30px;
-    height: 620px;
+
+.separate{
+
 }
 /*page-login*/
 .card{
@@ -329,13 +356,52 @@ h2{
     height: 700px;
     padding-left: 25%;
     padding-right: 25%;
+    display: flex;
+    justify-content: center;
 }
+
+
+
+.register-card{
+        background-color: bisque;
+        width: 200px;
+        border-radius: 30px;
+        margin-top: 50px;
+        padding-top: 117px;
+        width: 50%;
+        height: 700px;
+        padding-left: 25%;
+        padding-right: 25%;
+        justify-content: center;
+}
+
+.login-card{
+    margin-top: 50px;
+    background-color: antiquewhite;
+    width:30%;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    border-radius: 30px;
+}
+
+.card1{
+    width:3000px;
+    height: 1000px;
+}
+
 .legend{
     height: 100px;   
 }
+
+.legend-register{
+    height: 10px;   
+}
+
 h3{
     color:rgb(10, 7, 7);
-    font-size: 60px;
+    font-size: 40px;    
     text-align: center;
 }
 .form{
@@ -368,19 +434,27 @@ label{
 }
 .bouton{
     display: flex;
-    justify-content: right;
-    margin-right: 200px;
+    justify-content: center;
     padding-top: 80px;
 }
 .mdp-o{
     height: 100px;
-    padding-left: 30%;
+    text-align: center;
     padding-top: 50px;
 }
 .p3{
     font-size: 25px;
 }
 /*page-login*/
+
+/*event plus*/
+
+.card-img {
+    width: 80%;
+    justify-content: center;
+}
+/*event plus*/
+
 footer {
     background-color: #0000006f;
     padding: 20px ;
@@ -411,4 +485,45 @@ footer ul li {
 footer ul li i {
     margin-right: 5px;
     color: #f9f3f3;
+  }
+
+  .d-flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 120px;
+    justify-content: center;
+  }
+  
+  .card-body {
+    padding-top: 300px;
+    padding-right: 100px;
+    padding-left: 70px;
+    font-family:Arial, Helvetica, sans-serif ;
+  }
+
+  .card1 {
+    flex: 50%;
+    width:50%;
+    text-align: center;
+  }
+  .mt-5 {
+    margin-top: 90px;
+    text-align: center;
+  }
+
+  .bg-text {
+    background-color: beige;
+    border-radius: 30px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .information {
+    margin-bottom:20px;
+  }
+
+  strong {
+    font-size:30px;
   }

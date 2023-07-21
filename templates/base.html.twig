@@ -37,38 +37,30 @@
 				
 				<div class="menu">
 					<ul>
-						<li><a href="#acceuil" class="AC">Accueil</a></li>
-						<li><a href="#" class="RS">reservation</a></li>
-						<li><a href="#" class="CO">contact</a></li>
+						<li><a href="{{ path('app_home') }}" class="hover">Accueil</a></li>
+						<li><a href="#" class="hover">reservation</a></li>
+						<li><a href="#" class="hover">contact</a></li>
+						{% if is_granted('ROLE_ADMIN') %}
+							<li><a href="{{path('admin')}}" class="hover">Admin</a></li>
+						{% endif %}
+						
+
+						{% if not is_granted('IS_AUTHENTICATED_FULLY') %}
+							<li><a href="{{path('app_login')}}">
+										<button>se connecter</button>
+									</a>
+							</a></li>
+							<li>
+							<a href="{{path('app_register')}}">
+										<button>créer une compte</button>
+							</a></li>
+						{% else %}
+							<li><a href="{{ path('app_logout') }}">
+										<button>Deconnexion</button>
+							</a></li>	
+						{% endif %}
 					</ul>
 				</div>
-				<div class="icons-login">
-
-					<i class="fa-solid fa-bars">
-						{% if not is_granted('IS_AUTHENTICATED_FULLY') %}
-							<div class="login">
-								<a href="{{path('app_login')}}">
-
-									<button>se connecter</button><a/>
-									<hr>
-									<p>
-										<strong>Vous n'avez pas du compte?</strong>
-									</p>
-									<a href="{{path('app_register')}}">
-
-										<button>créer une compte</button>
-									</a>
-								</div>
-							{% else %}
-								<div class="logout">
-									<a href="{{ path('app_logout') }}">Deconnexion</a>
-								</div>
-							{% endif %}
-
-						</i>
-				</div>
-
-				
 				<div class="ispm">
 					<img src="{{ asset('image/logo ispm.png')}}">
 				</div>
